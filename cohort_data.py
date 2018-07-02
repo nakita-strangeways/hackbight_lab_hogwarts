@@ -52,11 +52,14 @@ def sort_by_cohort(filename):
     hogwarts_data = open(filename)
 
     for line in hogwarts_data:
-        first_name, last_name, house, advisor, grad_year = line.split("|") 
-        if grad_year == 'Winter 2016':
-            winter_16.append(first_name, last_name)
+    	order = line.split('|')
+    	cohort = order[4]
+    	first_name = order[0]
+    	last_name = order[1]
+    	full_name = first_name + " " + last_name
 
-            print(winter_16)
+    	print(cohort)
+
     return all_students
 
 
