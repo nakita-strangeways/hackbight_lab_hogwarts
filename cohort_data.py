@@ -53,10 +53,10 @@ def sort_by_cohort(filename):
 
     for line in hogwarts_data:
     	order = line.split('|')
-    	cohort = order[4]
     	first_name = order[0]
     	last_name = order[1]
     	full_name = first_name + " " + last_name
+    	cohort = order[4]
 
     	print(cohort)
 
